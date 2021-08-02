@@ -50,25 +50,25 @@ public class TestUtils {
 		public static void yakshaAssert(String testName, Object result, File file) throws IOException {
 			total++;
 			String[] r = testName.split("(?=\\p{Upper})");
-			//System.out.print("\n"  + BLUE_BOLD_BRIGHT + "=>");
-			testResult = testResult + "\n"  + BLUE_BOLD_BRIGHT + "=>";
+			System.out.print("\n"  + BLUE_BOLD_BRIGHT + "=>");
+			//testResult = testResult + "\n"  + BLUE_BOLD_BRIGHT + "=>";
 			
-			//System.out.print(YELLOW_BOLD_BRIGHT + "Test For : ");
-			testResult = testResult + YELLOW_BOLD_BRIGHT + "Test For : ";
+			System.out.print(YELLOW_BOLD_BRIGHT + "Test For : ");
+			//testResult = testResult + YELLOW_BOLD_BRIGHT + "Test For : ";
 						
 			for(int i=1;i<r.length;i++) {
-				//System.out.print(YELLOW_BOLD_BRIGHT + r[i] + " ");
-				testResult = testResult + YELLOW_BOLD_BRIGHT + r[i] + " ";
+				System.out.print(YELLOW_BOLD_BRIGHT + r[i] + " ");
+				//testResult = testResult + YELLOW_BOLD_BRIGHT + r[i] + " ";
 			}
-			//System.out.print(" : ");
-			testResult = testResult + " : ";
+			System.out.print(" : ");
+			//testResult = testResult + " : ";
 			if(result.toString().equals("true")) {
-				//System.out.println(GREEN_BOLD_BRIGHT + "PASSED" + TEXT_RESET);
-				testResult = testResult + GREEN_BOLD_BRIGHT + "PASSED" + TEXT_RESET;
+				System.out.println(GREEN_BOLD_BRIGHT + "PASSED" + TEXT_RESET);
+				//testResult = testResult + GREEN_BOLD_BRIGHT + "PASSED" + TEXT_RESET;
 				passed++;
 			}else {
-				//System.out.println(RED_BOLD_BRIGHT + "FAILED" + TEXT_RESET);
-				testResult = testResult + RED_BOLD_BRIGHT + "FAILED" + TEXT_RESET;
+				System.out.println(RED_BOLD_BRIGHT + "FAILED" + TEXT_RESET);
+				//testResult = testResult + RED_BOLD_BRIGHT + "FAILED" + TEXT_RESET;
 				failed++;
 			}
 			FileWriter writer = new FileWriter(file,true);
@@ -81,10 +81,10 @@ public class TestUtils {
 		}
 		
 		public static void testReport(){
-			System.out.println(testResult);
-			System.out.print("\n"  + BLUE_BOLD_BRIGHT + "TEST CASES EVALUATED : " + total + TEXT_RESET);
-			System.out.print("\n"  + GREEN_BOLD_BRIGHT + "PASSED : " + passed + TEXT_RESET);
-			System.out.println("\n"  + RED_BOLD_BRIGHT + "FAILED : " + failed + TEXT_RESET);
+			//System.out.println(testResult);
+			//System.out.print("\n"  + BLUE_BOLD_BRIGHT + "TEST CASES EVALUATED : " + total + TEXT_RESET);
+			//System.out.print("\n"  + GREEN_BOLD_BRIGHT + "PASSED : " + passed + TEXT_RESET);
+			//System.out.println("\n"  + RED_BOLD_BRIGHT + "FAILED : " + failed + TEXT_RESET);
 			
 		}
 				
